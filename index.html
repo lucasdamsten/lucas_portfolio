@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Damstén — CAO &amp; Maintenance</title>
+<meta name="description" content="Portfolio de Lucas Damstén, spécialiste CAO et maintenance, concepteur et artisan.">
+
+<!-- Polices : Space Grotesk pour les titres, IBM Plex Sans pour le texte courant -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="site-nav">
+  <a href="#accueil" class="nav-brand">L. Damstén</a>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#academiques">Projets académiques</a>
+    <a href="#apropos">Qui est Lucas</a>
+    <a href="#personnels">Projets personnels</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ SECTION 1 : ACCUEIL ============ -->
+  <section id="accueil" class="section section--accueil">
+    <div class="sheet-tag">FEUILLE 01 / ACCUEIL</div>
+
+    <div class="hero">
+      <div class="hero__portrait">
+        <!-- Remplacez cette div par une balise <img src="images/portrait.jpg" alt="Lucas Damstén"> -->
+        <div class="placeholder-img" data-label="Photo de profil&#10;images/portrait.jpg"></div>
+      </div>
+
+      <div class="hero__text">
+        <p class="kicker">Portfolio</p>
+        <h1>Lucas Damstén</h1>
+        <p class="hero__lead">
+          Je suis spécialiste du CAO et de la maintenance.<br>
+          Je suis aussi un concepteur et un artisan.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery-intro">
+      <span class="rule-label">Galerie de projets</span>
+      <div class="rule"></div>
+    </div>
+
+    <div class="gallery">
+      <!-- 6 vignettes de projets. Dupliquez ce bloc "gallery__item" pour en ajouter. -->
+      <figure class="gallery__item">
+        <div class="placeholder-img placeholder-img--sq" data-label="Projet 01"></div>
+        <figcaption><span class="fig-index">01</span> Titre du projet</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <div class="placeholder-img placeholder-img--sq" data-label="Projet 02"></div>
+        <figcaption><span class="fig-index">02</span> Titre du projet</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <div class="placeholder-img placeholder-img--sq" data-label="Projet 03"></div>
+        <figcaption><span class="fig-index">03</span> Titre du projet</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <div class="placeholder-img placeholder-img--sq" data-label="Projet 04"></div>
+        <figcaption><span class="fig-index">04</span> Titre du projet</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <div class="placeholder-img placeholder-img--sq" data-label="Projet 05"></div>
+        <figcaption><span class="fig-index">05</span> Titre du projet</figcaption>
+      </figure>
+      <figure class="gallery__item">
+        <div class="placeholder-img placeholder-img--sq" data-label="Projet 06"></div>
+        <figcaption><span class="fig-index">06</span> Titre du projet</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 : PROJETS ACADÉMIQUES ============ -->
+  <section id="academiques" class="section section--dark">
+    <div class="sheet-tag">FEUILLE 02 / PROJETS ACADÉMIQUES</div>
+    <h2>Projets académiques</h2>
+    <p class="section-intro">
+      Texte de présentation de vos projets réalisés en formation : contexte, objectifs, logiciels utilisés.
+    </p>
+
+    <div class="project-block">
+      <div class="project-block__text">
+        <h3>Nom du projet académique</h3>
+        <p>
+          Emplacement pour le texte descriptif du projet : cahier des charges, contraintes techniques,
+          méthode utilisée, résultat obtenu. Cliquez sur les points de la photo pour voir des explications
+          détaillées sur des éléments précis.
+        </p>
+      </div>
+      <div class="project-block__image">
+        <!-- Conteneur avec hotspots : voir script.js pour la liste des points -->
+        <div class="hotspot-frame" data-hotspot-group="academique-1">
+          <div class="placeholder-img" data-label="Image projet académique 1"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-block project-block--reverse">
+      <div class="project-block__text">
+        <h3>Nom du 2e projet académique</h3>
+        <p>
+          Deuxième emplacement de texte. Dupliquez ce bloc "project-block" pour ajouter d'autres projets.
+        </p>
+      </div>
+      <div class="project-block__image">
+        <div class="hotspot-frame" data-hotspot-group="academique-2">
+          <div class="placeholder-img" data-label="Image projet académique 2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 : QUI EST LUCAS ============ -->
+  <section id="apropos" class="section">
+    <div class="sheet-tag">FEUILLE 03 / QUI EST LUCAS</div>
+    <h2>Qui est Lucas</h2>
+
+    <div class="project-block">
+      <div class="project-block__text">
+        <h3>Parcours</h3>
+        <p>
+          Emplacement de texte pour votre parcours : formation, expériences, ce qui vous a mené vers
+          la CAO, la maintenance, la conception et l'artisanat.
+        </p>
+      </div>
+      <div class="project-block__image">
+        <div class="hotspot-frame" data-hotspot-group="apropos-1">
+          <div class="placeholder-img" data-label="Photo de vous en action"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-block project-block--reverse">
+      <div class="project-block__text">
+        <h3>Compétences &amp; outils</h3>
+        <p>
+          Emplacement de texte pour vos compétences : logiciels de CAO, machines, méthodes de maintenance,
+          matériaux travaillés. Les points sur l'image peuvent pointer vers un outil ou un poste de travail précis.
+        </p>
+      </div>
+      <div class="project-block__image">
+        <div class="hotspot-frame" data-hotspot-group="apropos-2">
+          <div class="placeholder-img" data-label="Photo atelier / poste de travail"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 : PROJETS PERSONNELS ============ -->
+  <section id="personnels" class="section section--dark">
+    <div class="sheet-tag">FEUILLE 04 / PROJETS PERSONNELS</div>
+    <h2>Projets personnels</h2>
+    <p class="section-intro">
+      Texte de présentation de vos projets réalisés en dehors du cadre scolaire ou professionnel.
+    </p>
+
+    <div class="project-block">
+      <div class="project-block__text">
+        <h3>Nom du projet personnel</h3>
+        <p>
+          Emplacement de texte descriptif : pourquoi ce projet, quelles étapes, quelles difficultés
+          rencontrées et résolues.
+        </p>
+      </div>
+      <div class="project-block__image">
+        <div class="hotspot-frame" data-hotspot-group="personnel-1">
+          <div class="placeholder-img" data-label="Image projet personnel 1"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-block project-block--reverse">
+      <div class="project-block__text">
+        <h3>Nom du 2e projet personnel</h3>
+        <p>
+          Deuxième emplacement de texte pour vos projets personnels.
+        </p>
+      </div>
+      <div class="project-block__image">
+        <div class="hotspot-frame" data-hotspot-group="personnel-2">
+          <div class="placeholder-img" data-label="Image projet personnel 2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="rule"></div>
+  <p>© <span id="year"></span> Lucas Damstén</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

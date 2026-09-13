@@ -19,16 +19,18 @@
    ========================================================================== */
 const hotspotsData = {
   "academique-1": [
-    { x: 30, y: 40, title: "Pièce usinée", text: "Décrivez ici cet élément précis de l'image." },
-    { x: 68, y: 65, title: "Assemblage", text: "Deuxième point d'explication sur l'image." },
+    { x: 20, y: 66, title: "Système d'inclinaison du canon ", text: "Une plaque d'indexation est utilisée pour régler l'inclinaison. Cette pièce est usinée par découpe laser." },
+    { x: 40, y: 57, title: "Vérin électrique", text: "Actionneur linéaire composé d'un potentiomètre de réglage de course. " },
+	{ x: 45, y: 81, title: "Panneau de commande", text: "Système électronique permettant le réglage de compression du ressort selon l'angle et la distance à atteindre." },
+	{ x: 76, y: 21, title: "Mécanisme de déclenchement", text: "Un électroaimant est fixé au bout du vérin permettant la compression du ressort. Le tir est effectué par désactivation de l'électroaimant." },
   ],
-  "academique-2": [
-    { x: 50, y: 50, title: "Détail", text: "Décrivez ici cet élément précis de l'image." },
+  "reducteur": [
+    { x: 25, y: 65, title: "Réducteur", text: "Moteur électrique"},
+	{ x: 45, y: 65, title: "Réducteur", text: "Accouplement flexible"},
+	{ x: 55, y: 65, title: "Réducteur", text: "Engrenage à dentures droites. Lubrification par barbotage."},
+	{ x: 65, y: 65, title: "Réducteur", text: "Système poulies courroies."},
   ],
-  "apropos-1": [
-    { x: 45, y: 55, title: "Détail", text: "Décrivez ici cet élément précis de l'image." },
-  ],
-  "apropos-2": [
+  "menuiserie": [
     { x: 30, y: 30, title: "Outil", text: "Décrivez ici cet outil ou ce poste de travail." },
     { x: 70, y: 60, title: "Outil", text: "Décrivez ici un second outil ou poste de travail." },
   ],
@@ -63,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
       button.setAttribute("aria-label", point.title || "Voir le détail");
       button.textContent = "+";
 
+	// TODO : hover text above point and not above image
+	
+	
       const tooltip = document.createElement("div");
       tooltip.className = "hotspot__tooltip";
       tooltip.innerHTML = `<strong>${point.title || ""}</strong>${point.text || ""}`;

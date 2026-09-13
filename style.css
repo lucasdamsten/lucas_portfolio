@@ -16,8 +16,9 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-body:    "IBM Plex Sans", sans-serif;
 
-  --max-width: 1120px;
+  --max-width: 75%;
 }
+
 
 * { box-sizing: border-box; }
 
@@ -28,7 +29,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.6;
 }
 
@@ -41,7 +42,7 @@ h1, h2, h3 {
 
 h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); }
 h2 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); }
-h3 { font-size: 1.3rem; }
+h3 { font-size: 1.6rem; }
 
 p { max-width: 62ch; }
 
@@ -67,19 +68,19 @@ a { color: inherit; }
   font-family: var(--font-display);
   font-weight: 600;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 2rem;
   letter-spacing: 0.01em;
 }
 
 .site-nav nav {
   display: flex;
-  gap: 1.6rem;
+  gap: 1.7rem;
   flex-wrap: wrap;
 }
 
 .site-nav nav a {
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 1.6rem;
   color: var(--ink);
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
@@ -119,6 +120,9 @@ a { color: inherit; }
   display: inline-block;
   padding: 0.25rem 0.6rem;
   margin-bottom: 2.2rem;
+
+  position: sticky;
+  top: 20px;
 }
 
 .section-intro {
@@ -145,23 +149,34 @@ a { color: inherit; }
   margin-bottom: 4rem;
 }
 
-.hero__portrait .placeholder-img {
-  aspect-ratio: 3 / 4;
+.hero__portrait {
+  width: 300px;
+  height: 400px;
+}
+
+.hero__portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border: 1px solid var(--ink);
 }
 
-.kicker {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  color: var(--blueprint);
-  margin: 0 0 0.6rem 0;
-  letter-spacing: 0.03em;
+
+.hero__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__center h1 {
+  margin: 0 0 1rem 0;
 }
 
 .hero__lead {
-  font-size: 1.15rem;
   color: #3A3728;
   max-width: 42ch;
+  margin: 0;
 }
 
 .gallery-intro {
@@ -173,7 +188,7 @@ a { color: inherit; }
 
 .rule-label {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 36px;
   white-space: nowrap;
   color: var(--ink);
 }
@@ -189,13 +204,13 @@ a { color: inherit; }
 }
 
 .gallery__item .placeholder-img--sq {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: auto;
   border: 1px solid var(--ink);
 }
 
 .gallery__item figcaption {
   margin-top: 0.6rem;
-  font-size: 0.92rem;
+  font-size: 28px;
   display: flex;
   gap: 0.5rem;
   align-items: baseline;
@@ -206,36 +221,58 @@ a { color: inherit; }
   color: var(--brass);
   font-size: 0.82rem;
 }
-
+.video-frame video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 /* ==========================================================================
+   BLOCS "PROJET" (texte + image à hotspots), utilisés dans les 3 autres
    BLOCS "PROJET" (texte + image à hotspots), utilisés dans les 3 autres
    sections
    ========================================================================== */
 .project-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 5rem;
   align-items: center;
+  justify-content:center;
   padding: 2.6rem 0;
   border-top: 1px solid var(--line);
 }
+.project-block__image {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
+
+.project-block__image img {
+    max-width: 100%;
+    height: auto;
+}
+
 .section--dark .project-block { border-top-color: var(--line-dark); }
 
 .project-block--reverse .project-block__image { order: -1; }
+
+.block-reverse.video-frame {order: -1; }
 
 .project-block__text p { color: #4A4738; }
 .section--dark .project-block__text p { color: #C8C3B2; }
 
 /* ==========================================================================
    IMAGES PLACEHOLDER — à remplacer par de vraies balises <img>
-   ========================================================================== */
-.placeholder-img {
+   
+========================================================================== */
+
+
+
+#placeholder-img-portrait {
   width: 100%;
   height: 100%;
   min-height: 220px;
   background:
-    repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0 1px, transparent 1px 14px),
-    linear-gradient(180deg, #DCD4BC, #CFC6AC);
+repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px 14px), linear-gradient(180deg, #e8d3b1, #ae712a);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,6 +284,92 @@ a { color: inherit; }
   color: #6B6350;
   position: relative;
 }
+   
+.placeholder-img {
+   width: 100%;
+  height: auto;
+  min-height: 0px;
+  background:
+    repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0 1px, transparent 1px 14px),
+    linear-gradient(180deg, #DCD4BC, #CFC6AC);
+  display: block;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  white-space: pre-line;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: #6B6350;
+  position: relative;
+}
+
+
+.placeholder-img-about{
+	width: 100%;
+  height: auto;
+  min-height: 0px;
+  background:
+    linear-gradient(180deg, #DCD4BC, #CFC6AC);
+  display: block;
+  object-fit: contain;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  white-space: pre-line;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: #6B6350;
+  position: relative;
+}
+
+
+.evolution-bg{
+  background: none !important;
+}
+
+.plans-images {
+    display: flex;
+    gap: 0.05rem;
+    align-items: center;
+	margin-bottom:50px;
+}
+
+
+.plans-images img {
+	display:flex;
+    width: 70%;
+    height: 250px;
+    object-fit: contain;
+}
+
+.sm-logo{
+	width:40%
+}
+
+#img-norm{
+   width: 100%;
+}
+
+#hvac-plan-main{
+	   width: 70%;
+	   margin-left: 25%;
+	  transform: rotate(-90deg);
+}
+
+.plans-images-hvac {
+    display: flex;
+    gap: 13.5rem;
+    align-items: center;
+	justify-content:center
+}
+.plans-images-hvac img {
+	transform: rotate(-90deg);
+	width:20%;
+}
+
 
 /* petites amorces d'angle façon plan technique */
 .placeholder-img::before,
@@ -259,6 +382,15 @@ a { color: inherit; }
 }
 .placeholder-img::before { top: 6px; left: 6px; border-right: none; border-bottom: none; }
 .placeholder-img::after  { bottom: 6px; right: 6px; border-left: none; border-top: none; }
+
+
+.img-projet-acad{
+	width:100%;
+}
+
+.sm-bague{
+	width:60%
+}
 
 /* ==========================================================================
    HOTSPOTS — points cliquables sur une image
@@ -281,7 +413,7 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 18px;
   line-height: 1;
   padding: 0;
   transition: transform 0.15s ease, background 0.15s ease;
@@ -303,7 +435,7 @@ a { color: inherit; }
   background: var(--ink);
   color: var(--paper-text);
   padding: 0.7rem 0.9rem;
-  font-size: 0.85rem;
+  font-size: 16px;
   line-height: 1.4;
   border: 1px solid var(--brass);
   display: none;
@@ -315,7 +447,7 @@ a { color: inherit; }
   font-family: var(--font-display);
   color: var(--brass);
   margin-bottom: 0.2rem;
-  font-size: 0.82rem;
+  font-size: 18px;
 }
 
 .hotspot[aria-expanded="true"] + .hotspot__tooltip,
@@ -330,7 +462,7 @@ a { color: inherit; }
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2.4rem 2rem 3rem;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   color: #6B6350;
 }
 .site-footer .rule { margin-bottom: 1.2rem; }

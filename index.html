@@ -5,110 +5,130 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Lucas Damstén — CAO &amp; Maintenance</title>
 		<meta name="description" content="Portfolio de Lucas Damstén, spécialiste CAO et maintenance, concepteur et artisan.">
-		
+
 		<!-- Polices : Space Grotesk pour les titres, IBM Plex Sans pour le texte courant -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-		
+
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		
+
 		<!-- ============ NAVIGATION ============ -->
 		<header class="site-nav">
-			<a href="#accueil" class="nav-brand">Lucas Damstén</a>
+
+			<!-- ===== Nom + boutons contact ===== -->
+			<div class="contact-menu">
+				<span class="nav-brand">Lucas Damstén</span>
+				<a href="mailto:damstenlucas@hotmail.com" class="nav-pill" data-fr="E-mail" data-en="Email">E-mail</a>
+				<a href="https://github.com/lucasdamsten/lucas_portfolio/blob/main/CV_Lucas_Damsten_Github.pdf" class="nav-pill" target="_blank" rel="noopener" data-fr="CV" data-en="CV">CV</a>
+			</div>
+
 			<nav>
-				<a href="#accueil">Accueil</a>
-				<a href="#academiques">Projets académiques</a>
-				<a href="#apropos">Mon parcours</a>
-				<a href="#personnels">Projets personnels</a>
+				<a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+				<a href="#academiques" data-fr="Projets académiques" data-en="Academic projects">Projets académiques</a>
+				<a href="#apropos" data-fr="Mon parcours" data-en="My journey">Mon parcours</a>
+				<a href="#personnels" data-fr="Projets personnels" data-en="Personal projects">Projets personnels</a>
+
+				<!-- ===== Sélecteur de langue ===== -->
+				<button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">
+					<span class="lang-toggle__option lang-toggle__option--active" data-lang="fr">FR</span>
+					<span class="lang-toggle__sep">/</span>
+					<span class="lang-toggle__option" data-lang="en">EN</span>
+				</button>
 			</nav>
 		</header>
-		
+
 		<main>
-			
+
 			<!-- ============ SECTION 1 : ACCUEIL ============ -->
 			<section id="accueil" class="section section--accueil">
-				
+
 				<div class="hero">
 					<div class="hero__portrait">
-						<!-- Remplacez cette div par une balise <img src="images/portrait.jpg" alt="Lucas Damstén"> -->
 						<img src="images/portrait.jpg" alt="Photo de portrait de Lucas Damstén" id="placeholder-img-portrait" data-label="Photo de profil&#10;images/portrait.jpg" >
 					</div>
-					
-					
+
+
 					<div class="hero__center">
-						<p class="kicker">Portfolio</p>
-						<h1>Lucas Damstén</h1>
-						
-						<p class="hero__lead">
+						<p class="kicker" data-fr="Portfolio" data-en="Portfolio">Portfolio</p>
+						<h1 data-fr="Bienvenue, je suis Lucas Damstén" 
+						 data-en="Hi, I'm Lucas Damstén">
+						 </h1>
+
+						<p class="hero__lead"
+							data-fr="Je suis spécialiste de la CAO et de la maintenance.<br>Je suis aussi un concepteur et un artisan."
+							data-en="I am a CAD and maintenance specialist.<br>I am also a designer and a craftsman.">
 							Je suis spécialiste de la CAO et de la maintenance.<br>
-							Je suis aussi un concepteur et un artisan.
+						</p>	
+						<p	Je suis aussi un concepteur et un artisan.>
 						</p>
 					</div>
 				</div>
-				
-				
+
+
 			</div>
-			
+
 			<div class="gallery-intro">
-				<span class="rule-label">Galerie de projets</span>
+				<span class="rule-label" data-fr="Galerie de projets" data-en="Project gallery">Galerie de projets</span>
 				<div class="rule"></div>
 			</div>
-			
+
 			<div class="gallery">
 				<!-- 6 vignettes de projets. Dupliquez ce bloc "gallery__item" pour en ajouter. -->
 				<figure class="gallery__item">
-					<figcaption><span class="fig-index"></span> Canon à balle</figcaption>
+					<figcaption><span class="fig-index"></span> <span data-fr="Canon à balle" data-en="Ball cannon">Canon à balle</span></figcaption>
 					<img src="images/canon.png" class="placeholder-img placeholder-img--sq" data-label="Projet 01">
 				</figure>
-				
+
 				<figure class="gallery__item">
-					<figcaption><span class="fig-index"></span> Maintenance de remorques</figcaption>
+					<figcaption><span class="fig-index"></span> <span data-fr="Maintenance de remorques" data-en="Trailer maintenance">Maintenance de remorques</span></figcaption>
 					<img src="images/faymonville_service.jpg" class="placeholder-img placeholder-img--sq" data-label="Projet 02">
 				</figure>
-				
-				<figure class="gallery__item">         
-					<figcaption><span class="fig-index"></span> Réducteur de vitesse</figcaption>
+
+				<figure class="gallery__item">
+					<figcaption><span class="fig-index"></span> <span data-fr="Réducteur de vitesse" data-en="Speed reducer">Réducteur de vitesse</span></figcaption>
 					<img src="images/reducteur_vue_ensemble.png" class="placeholder-img placeholder-img--sq" data-label="Projet 03">
 				</figure>
-				
-				
+
+
 				<figure class="gallery__item">
-					<figcaption><span class="fig-index"></span> Bague de fiançailles</figcaption>
+					<figcaption><span class="fig-index"></span> <span data-fr="Bague de fiançailles" data-en="Engagement ring">Bague de fiançailles</span></figcaption>
 					<img src="images/bague_polissage.jpg" class="placeholder-img placeholder-img--sq" data-label="Projet 04">
 				</figure>
-				
+
 				<figure class="gallery__item">
-					<figcaption><span class="fig-index"></span> Terrasse en bois</figcaption>
+					<figcaption><span class="fig-index"></span> <span data-fr="Terrasse en bois" data-en="Wooden deck">Terrasse en bois</span></figcaption>
 					<img src="images/terrasse_haut.jpg"  class="placeholder-img placeholder-img--sq" data-label="Projet 05">
 				</figure>
-				
+
 				<figure class="gallery__item">
-					<figcaption><span class="fig-index"></span> Processus automatisé</figcaption>
+					<figcaption><span class="fig-index"></span> <span data-fr="Processus automatisé" data-en="Automated process">Processus automatisé</span></figcaption>
 					<img src="images/Automatisation_d_un_processus_de_tri.png" class="placeholder-img placeholder-img--sq" data-label="Projet 06">
 				</figure>
-				
+
 			</div>
 		</section>
-		
+
 		<!-- ============ SECTION 2 : PROJETS ACADÉMIQUES ============ -->
 		<section id="academiques" class="section section--dark">
-			<h2>Projets académiques</h2>
+			<h2 data-fr="Projets académiques" data-en="Academic projects">Projets académiques</h2>
 			<p class="section-intro">
 			</p>
-			
+
 			<!--======== Canon =========-->
 			<div class="project-block">
 				<div class="project-block__text">
-					<h3>Canon à tir parabolique
+					<h3 data-fr="Canon à tir parabolique" data-en="Parabolic-trajectory cannon">Canon à tir parabolique
 					</h3>
-					<p>
+					<p
+						data-fr="Pour vérifier les équations de la statique, j'ai fabriqué un canon à angle réglable avec un système de réglage de la compression variable électroniquement. J'ai fabriqué le canon sur la base d’un cahier des charges comprenant plusieurs critères, notamment les dimensions, le coût et les exigences de fonctionnement. Pour sa fabrication, nous avons utilisé différentes machines-outils, telles qu’un tour conventionnel, une fraiseuse à commande numérique, une perceuse à colonne, ainsi que d’autres équipements d’usinage. La modélisation complète du canon a été réalisée à l’aide de SolidWorks. À l’issue du projet, notre équipe a obtenu les meilleurs résultats parmi les cinq équipes participantes car nous avons répondu à l’ensemble des exigences définies dans le cahier des charges."
+						data-en="To verify the laws of statics, I built an adjustable-angle cannon with an electronically variable compression system. I built the cannon based on a set of specifications covering several criteria, including dimensions, cost, and operating requirements. To manufacture it, we used various machine tools, such as a conventional lathe, a CNC milling machine, a pillar drill, and other machining equipment. The full modeling of the cannon was done in SolidWorks. At the end of the project, our team achieved the best results among the five participating teams because we met all of the requirements defined in the specifications.">
 						Pour vérifier les équations de la statique, j'ai fabriqué un canon à angle réglable avec un système de réglage de la compression variable électroniquement.
-						J'ai fabriqué le canon sur la base d’un cahier des charges comprenant plusieurs critères, notamment les dimensions, le coût et les exigences de fonctionnement. 
+						J'ai fabriqué le canon sur la base d’un cahier des charges comprenant plusieurs critères, notamment les dimensions, le coût et les exigences de fonctionnement.
 						Pour sa fabrication, nous avons utilisé différentes machines-outils, telles qu’un tour conventionnel, une fraiseuse à commande numérique, une perceuse à colonne, ainsi que d’autres équipements d’usinage.
-						La modélisation complète du canon a été réalisée à l’aide de SolidWorks. 
+						La modélisation complète du canon a été réalisée à l’aide de SolidWorks.
 						À l’issue du projet, notre équipe a obtenu les meilleurs résultats parmi les cinq équipes participantes car nous avons répondu à l’ensemble des exigences définies dans le cahier des charges.
 					</p>
 				</div>
@@ -117,13 +137,15 @@
 						<img src ="images/canon.png" data-label="Image canon projet académique 1">
 					</div>
 				</div>
-				
+
 				<!-- Vidéo -->
 				<div class="project-block__text">
-					<h3>Démonstration</h3>
-					<p>
+					<h3 data-fr="Démonstration" data-en="Demonstration">Démonstration</h3>
+					<p
+						data-fr="J'ai dû régler l'angle et la longueur de compression du ressort via l'interface électronique pour tirer la balle dans le réceptacle. L'angle d'inclinaison était imposé avant le tir."
+						data-en="I had to set the angle and the spring compression length via the electronic interface to fire the ball into the receptacle. The tilt angle was set before firing.">
 						J'ai dû régler l'angle et la longueur de compression du ressort via l'interface électronique pour tirer la balle dans le réceptacle.
-						L'angle d'inclinaison était imposé avant le tir. 
+						L'angle d'inclinaison était imposé avant le tir.
 					</p>
 				</div>
 				<div class="project-block__image">
@@ -135,51 +157,55 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!--======== Réducteur =========-->
-			
+
 			<div class="project-block project-block--reverse">
-				
+
 				<div class="project-block__text">
-					<h3>Réducteur de vitesse</h3>
-					
-					<p>
+					<h3 data-fr="Réducteur de vitesse" data-en="Speed reducer">Réducteur de vitesse</h3>
+
+					<p
+						data-fr="J'ai calculé et dessiné ce système de réduction de vitesse qui est composé d'un moteur électrique suivi d'un réducteur et d'un système de poulies entraînées par courroies. Ce projet, établi par un cahier des charges, avait pour but de dimensionner l’engrenage, les arbres, les poulies et les courroies tout en tenant compte des propriétés mécaniques de chaque matériau."
+						data-en="I calculated and designed this speed reduction system, made up of an electric motor followed by a gearbox and a belt-driven pulley system. This project, based on a set of specifications, aimed to size the gearing, shafts, pulleys, and belts while taking into account the mechanical properties of each material.">
 						J'ai calculé et dessiné ce système de réduction de vitesse qui est composé d'un moteur électrique suivi d'un réducteur et d'un système de poulies entraînées par courroies.
 						Ce projet, établi par un cahier des charges, avait pour but de dimensionner l’engrenage, les arbres, les poulies et les courroies tout en tenant compte des propriétés mécaniques de chaque matériau.
 					</p>
 				</div>
-				
+
 				<div class="project-block__image">
-					
+
 					<div class="hotspot-frame" data-hotspot-group="reducteur">
-						
+
 						<img
 						src="images/reducteur_3D.png"
 						alt="Modèle 3D du réducteur de vitesse"
 						data-label="Image projet académique 2"
 						>
-						
+
 						<!-- Les hotspots seront ajoutés automatiquement par JavaScript -->
-						
+
 					</div>
-					
+
 				</div>
 			</div>
-			
-			
+
+
 			<div class="plans-images">
 				<img src ="images/reducteur_dessin.png" data-label="Image réducteur plan projet académique 2">
 				<img  src ="images/reducteur_vue_ensemble.png" data-label="Image réducteur plan 2 projet académique 2">
 				<img src ="images/shaft_output.png" data-label="Image réducteur plan 3 projet académique 2">
 			</div>
-			
+
 			<!--======== HVAC =========-->
 			<div class="project-block">
 				<div class="project-block__text">
-					<h3>Conception d’une installation HVAC</h3>
-					<p>
-						J'ai du concevoir une installation HVAC pour un supermarché. 
-						L’installation, son emplacement, ses capacités, son rendement et les circuits qui la composent ont dû être établis afin de garantir son bon fonctionnement. 
+					<h3 data-fr="Conception d’une installation HVAC" data-en="Design of an HVAC system">Conception d’une installation HVAC</h3>
+					<p
+						data-fr="J'ai du concevoir une installation HVAC pour un supermarché. L’installation, son emplacement, ses capacités, son rendement et les circuits qui la composent ont dû être établis afin de garantir son bon fonctionnement. J'ai conçu le système pour deux fonctionnements, été et hiver. Cette installation est composée de panneaux solaires, d’une pompe à chaleur, d’un groupe de récupération de chaleur et d’autres éléments essentiels au fonctionnement de l’installation."
+						data-en="I had to design an HVAC system for a supermarket. The system's layout, location, capacities, efficiency, and circuits had to be established to ensure proper operation. I designed the system for two operating modes, summer and winter. This system includes solar panels, a heat pump, a heat recovery unit, and other components essential to its operation.">
+						J'ai du concevoir une installation HVAC pour un supermarché.
+						L’installation, son emplacement, ses capacités, son rendement et les circuits qui la composent ont dû être établis afin de garantir son bon fonctionnement.
 						J'ai conçu le système pour deux fonctionnements, été et hiver. Cette installation est composée de panneaux solaires, d’une pompe à chaleur, d’un groupe de récupération de chaleur et d’autres éléments essentiels au fonctionnement de l’installation.
 					</p>
 				</div>
@@ -187,22 +213,24 @@
 					<img id="hvac-plan-main" src ="images/distribution_aeraulique.png" data-label="Image projet académique 1">
 				</div>
 			</div>
-			
+
 			<div class="plans-images-hvac">
 				<img src ="images/encombrement.png" data-label="Image tri plan 2 projet académique 3">
 				<img  src ="images/PID1.png" data-label="Image tri plan 3 projet académique 3">
 				<img  src ="images/distribution_hydraulique.png" data-label="Image tri plan 3 projet académique 3">
-				
+
 			</div>
-			
+
 			<!--======== Système Tri =========-->
 			<div class="project-block project-block--reverse">
 				<div class="project-block__text">
-					<h3>Conception d’un système de tri et traitement</h3>
-					<p>
+					<h3 data-fr="Conception d’un système de tri et traitement" data-en="Design of a sorting and processing system">Conception d’un système de tri et traitement</h3>
+					<p
+						data-fr="Ce projet d’automatisation de processus a pour but de trier 2 types de matériaux afin de leur faire subir un traitement thermique. Les matériaux sont déplacés à l'aide de vérin depuis une cheminée d’acheminement jusqu’à un emplacement de stockage. Différents capteurs de proximité et de détection de couleur sont utilisés pour détecter et déplacer les matériaux selon leur couleur. Un bornier a été utilisé pour rendre ce système didactique."
+						data-en="This process-automation project aims to sort 2 types of materials so they can undergo heat treatment. The materials are moved using a pneumatic cylinder from a feed chute to a storage location. Various proximity and color-detection sensors are used to detect and move the materials according to their color. A terminal block was used to make this system educational.">
 						Ce projet d’automatisation de processus a pour but de trier 2 types de matériaux afin de leur faire subir un traitement thermique.
-						Les matériaux sont déplacés à l'aide de vérin depuis une cheminée d’acheminement jusqu’à un emplacement de stockage. 
-						Différents capteurs de proximité et de détection de couleur sont utilisés pour détecter et déplacer les matériaux selon leur couleur. 
+						Les matériaux sont déplacés à l'aide de vérin depuis une cheminée d’acheminement jusqu’à un emplacement de stockage.
+						Différents capteurs de proximité et de détection de couleur sont utilisés pour détecter et déplacer les matériaux selon leur couleur.
 						Un bornier a été utilisé pour rendre ce système didactique.
 					</p>
 				</div>
@@ -212,21 +240,23 @@
 					</div>
 				</div>
 			</div>
-			
-			
+
+
 		</section>
-		
+
 		<!-- ============ SECTION 3 : QUI EST LUCAS ============ -->
 		<section id="apropos" class="section">
-			<h2>Mon parcours</h2>
-			
+			<h2 data-fr="Mon parcours" data-en="My journey">Mon parcours</h2>
+
 			<!-- ========== Parcours ========== -->
 			<div class="project-block">
 				<div class="project-block__text">
-					<h3>Du terrain à la conception technique</h3>
-					<p>
+					<h3 data-fr="Du terrain à la conception technique" data-en="From the field to technical design">Du terrain à la conception technique</h3>
+					<p
+						data-fr="Je suis titulaire d’un bachelier en électromécanique que j'ai obtenu après une reconversion de la menuiserie vers la mécanique. C’est en travaillant que j’ai ressenti le besoin de mieux comprendre les systèmes et les technologies qui m’entouraient. J’ai donc choisi de reprendre des études pour approfondir mes connaissances techniques. Aujourd’hui, cette formation me permet de comprendre, concevoir et résoudre des problèmes avec une vision plus globale."
+						data-en="I hold a bachelor's degree in electromechanics, earned after retraining from carpentry to mechanics. It was while working that I felt the need to better understand the systems and technologies around me. So I chose to go back to school to deepen my technical knowledge. Today, this training lets me understand, design, and solve problems with a broader perspective.">
 						Je suis titulaire d’un bachelier en électromécanique que j'ai obtenu après une reconversion de la menuiserie vers la mécanique.
-						C’est en travaillant que j’ai ressenti le besoin de mieux comprendre les systèmes et les technologies qui m’entouraient. 
+						C’est en travaillant que j’ai ressenti le besoin de mieux comprendre les systèmes et les technologies qui m’entouraient.
 						J’ai donc choisi de reprendre des études pour approfondir mes connaissances techniques.
 						Aujourd’hui, cette formation me permet de comprendre, concevoir et résoudre des problèmes avec une vision plus globale.
 					</p>
@@ -235,17 +265,19 @@
 					<img src="images/evolution.png" class="placeholder-img-about evolution-bg" data-label="Photo de vous en action">
 				</div>
 			</div>
-			
-			
-			
+
+
+
 			<!-- ========== Spécialisation ========== -->
 			<div class="project-block project-block--reverse">
 				<div class="project-block__text">
-					<h3>Bachelier en électromécanique</h3>
-					<p>
-						Lors de mon bachelier, mon expérience de terrain m’a permis de faire le lien entre la théorie et la pratique. 
+					<h3 data-fr="Bachelier en électromécanique" data-en="Bachelor's degree in electromechanics">Bachelier en électromécanique</h3>
+					<p
+						data-fr="Lors de mon bachelier, mon expérience de terrain m’a permis de faire le lien entre la théorie et la pratique. J’ai particulièrement apprécié reprendre les études, car je comprenais enfin pourquoi les systèmes étaient conçus d’une certaine manière plutôt qu’une autre. Cette formation m’a également permis de développer un regard plus critique sur les informations et les solutions qui se présentaient à moi. J’ai pu combiner ma rigueur avec mon expérience pratique afin de donner le meilleur de mes capacités. Malgré des bases théoriques moins solides au départ, liées à mon parcours professionnel, ma motivation m’a permis de progresser rapidement et de terminer mon bachelier avec une grande distinction."
+						data-en="During my degree, my field experience helped me connect theory with practice. I especially enjoyed going back to school, because I finally understood why systems were designed one way rather than another. This training also helped me develop a more critical eye toward the information and solutions I encountered. I was able to combine my rigor with my practical experience to give the best of my abilities. Despite a weaker theoretical foundation at the start due to my professional background, my motivation allowed me to progress quickly and finish my degree with great distinction.">
+						Lors de mon bachelier, mon expérience de terrain m’a permis de faire le lien entre la théorie et la pratique.
 						J’ai particulièrement apprécié reprendre les études, car je comprenais enfin pourquoi les systèmes étaient conçus d’une certaine manière plutôt qu’une autre.
-						Cette formation m’a également permis de développer un regard plus critique sur les informations et les solutions qui se présentaient à moi. 
+						Cette formation m’a également permis de développer un regard plus critique sur les informations et les solutions qui se présentaient à moi.
 						J’ai pu combiner ma rigueur avec mon expérience pratique afin de donner le meilleur de mes capacités.
 						Malgré des bases théoriques moins solides au départ, liées à mon parcours professionnel, ma motivation m’a permis de progresser rapidement et de terminer mon bachelier avec une grande distinction.
 					</p>
@@ -253,105 +285,115 @@
 				<div class="project-block__image">
 					<img src="images/ephec-tech.png" class="placeholder-img evolution-bg sm-logo" data-label="Photo de vous en action">
 				</div>
-				
+
 			</div>
-			
+
 			<!-- ========== Erasmus ========== -->
 			<div class="project-block project-block--reverse">
 				<div class="project-block__text">
-					<h3>Erasmus à VILNIUS TECH</h3>
-					<p>
+					<h3 data-fr="Erasmus à VILNIUS TECH" data-en="Erasmus at VILNIUS TECH">Erasmus à VILNIUS TECH</h3>
+					<p
+						data-fr="Mon Erasmus m’a permis de consolider mes connaissances techniques et pratiques, notamment à travers l’utilisation de SolidWorks et des cours d’analyse de systèmes automobiles. J’ai notamment étudié le fonctionnement de boîtes de vitesses, de systèmes de suspension et de réducteurs en reliant la théorie à des applications de démontage. Les cours étant dispensés en anglais, cette expérience m’a également permis de renforcer mes compétences techniques et ma maîtrise de la langue."
+						data-en="My Erasmus exchange helped me strengthen my technical and practical knowledge, particularly through using SolidWorks and taking courses on automotive systems analysis. In particular, I studied how gearboxes, suspension systems, and speed reducers work, linking theory to hands-on disassembly. Since the courses were taught in English, this experience also helped me strengthen my technical skills and my command of the language.">
 						Mon Erasmus m’a permis de consolider mes connaissances techniques et pratiques, notamment à travers l’utilisation de SolidWorks et des cours d’analyse de systèmes automobiles.
-						
+
 						J’ai notamment étudié le fonctionnement de boîtes de vitesses, de systèmes de suspension et de réducteurs en reliant la théorie à des applications de démontage.
-						
+
 						Les cours étant dispensés en anglais, cette expérience m’a également permis de renforcer mes compétences techniques et ma maîtrise de la langue.
-						
+
 					</p>
 				</div>
 				<div class="project-block__image">
 					<img src="images/Vilnius-tech.png" class="placeholder-img evolution-bg sm-logo" data-label="Photo de vous en action">
 				</div>
-				
+
 			</div>
-			
+
 			<!-- ========== Mécanicien ========== -->
 			<div class="project-block">
 				<div class="project-block__text">
-					<h3>Mécanicien</h3>
-					<p>
-						J’ai travaillé au sein du service de réparation de Faymonville Trailer. 
+					<h3 data-fr="Mécanicien" data-en="Mechanic">Mécanicien</h3>
+					<p
+						data-fr="J’ai travaillé au sein du service de réparation de Faymonville Trailer. Étant menuisier de formation, je suis arrivé dans ce domaine avec très peu de connaissances en mécanique. Au cours de deux années, j’ai acquis les compétences nécessaires pour travailler en autonomie et intervenir sur différents types de remorques : transport de verre, transport de bois et remorques extensibles. Chaque type de remorque m’a permis de découvrir des systèmes électriques, pneumatiques et hydrauliques différents, ainsi que leurs problèmes et méthodes de réparation. J’ai également eu l’occasion d’intervenir directement sur le terrain lors de dépannages. Cette expérience m’a surtout appris à apprendre par moi-même, à m’adapter à de nouvelles situations et à chercher des solutions. C’est cette curiosité et cette motivation à comprendre de nouvelles choses qui m’ont permis de passer de débutant à mécanicien autonome."
+						data-en="I worked in the repair department at Faymonville Trailer. Trained as a carpenter, I arrived in this field with very little mechanical knowledge. Over two years, I gained the skills needed to work independently and service different types of trailers: glass transport, timber transport, and extendable trailers. Each type of trailer let me discover different electrical, pneumatic, and hydraulic systems, along with their issues and repair methods. I also had the opportunity to work directly on-site during breakdown repairs. This experience mainly taught me to teach myself, adapt to new situations, and look for solutions. It's this curiosity and drive to understand new things that took me from beginner to independent mechanic.">
+						J’ai travaillé au sein du service de réparation de Faymonville Trailer.
 						Étant menuisier de formation, je suis arrivé dans ce domaine avec très peu de connaissances en mécanique.
 						Au cours de deux années, j’ai acquis les compétences nécessaires pour travailler en autonomie et intervenir sur différents types de remorques : transport de verre, transport de bois et remorques extensibles.
-						Chaque type de remorque m’a permis de découvrir des systèmes électriques, pneumatiques et hydrauliques différents, ainsi que leurs problèmes et méthodes de réparation. 
+						Chaque type de remorque m’a permis de découvrir des systèmes électriques, pneumatiques et hydrauliques différents, ainsi que leurs problèmes et méthodes de réparation.
 						J’ai également eu l’occasion d’intervenir directement sur le terrain lors de dépannages.
-						Cette expérience m’a surtout appris à apprendre par moi-même, à m’adapter à de nouvelles situations et à chercher des solutions. 
+						Cette expérience m’a surtout appris à apprendre par moi-même, à m’adapter à de nouvelles situations et à chercher des solutions.
 						C’est cette curiosité et cette motivation à comprendre de nouvelles choses qui m’ont permis de passer de débutant à mécanicien autonome.
-						
+
 					</p>
 				</div>
 				<div class="project-block__image">
 					<img src="images/faymonville.png" class="placeholder-img" data-label="Photo de vous en action">
 				</div>
 			</div>
-			
-			
+
+
 			<!-- ========== Menuisier ========== -->
 			<div class="project-block project-block--reverse">
 				<div class="project-block__text">
-					<h3>Menuisier</h3>
-					<p>
-						La menuiserie est un métier qui m’a toujours attiré car elle permet de transformer une idée en un projet concret. 
+					<h3 data-fr="Menuisier" data-en="Carpenter">Menuisier</h3>
+					<p
+						data-fr="La menuiserie est un métier qui m’a toujours attiré car elle permet de transformer une idée en un projet concret. C’est cette dimension créative qui m’a donné envie de continuer à pratiquer la menuiserie aujourd’hui comme hobby. Ce métier m’a apporté des compétences qui me servent encore dans mon parcours comme la lecture de plans, la précision, la rigueur, l'autonomie et la capacité à travailler de mes propres mains. Même si j’ai depuis évolué vers la mécanique et l’ingénierie, la menuiserie reste pour moi une manière de créer, de concevoir et de réaliser des projets concrets."
+						data-en="Carpentry is a trade that has always drawn me in because it lets you turn an idea into a concrete project. It's this creative dimension that made me want to keep practicing carpentry today as a hobby. This trade gave me skills that still serve me in my career, such as reading plans, precision, rigor, independence, and the ability to work with my own hands. Even though I've since moved into mechanics and engineering, carpentry remains for me a way to create, design, and bring concrete projects to life.">
+						La menuiserie est un métier qui m’a toujours attiré car elle permet de transformer une idée en un projet concret.
 						C’est cette dimension créative qui m’a donné envie de continuer à pratiquer la menuiserie aujourd’hui comme hobby.
 						Ce métier m’a apporté des compétences qui me servent encore dans mon parcours comme la lecture de plans, la précision, la rigueur, l'autonomie et la capacité à travailler de mes propres mains.
 						Même si j’ai depuis évolué vers la mécanique et l’ingénierie, la menuiserie reste pour moi une manière de créer, de concevoir et de réaliser des projets concrets.
-						
-						
-						
+
+
+
 					</p>
 				</div>
 				<div class="project-block__image">
 					<img src="images/menuiserie.png" class="placeholder-img" data-label="Photo de vous en action">
 				</div>
 			</div>
-			
-			
+
+
 		</section>
-		
-		
+
+
 		<!-- ============ SECTION 4 : PROJETS PERSONNELS ============ -->
 		<section id="personnels" class="section section--dark">
-			<h2>Projets personnels</h2>
-			<p class="section-intro">
+			<h2 data-fr="Projets personnels" data-en="Personal projects">Projets personnels</h2>
+			<p class="section-intro"
+				data-fr="Concevoir, fabriquer, réparer : passer de l'idée au concret."
+				data-en="Design, build, repair: turning ideas into reality.">
 				Concevoir, fabriquer, réparer : passer de l'idée au concret.
 			</p>
-			
+
 			<div class="project-block">
 				<div class="project-block__text">
-					<h3>Bague de fiançailles et pendentif </h3>
-					<p>
-						En quelques semaines, j'ai pris le temps de découvrir le métier de joaillier. 
+					<h3 data-fr="Bague de fiançailles et pendentif" data-en="Engagement ring and pendant">Bague de fiançailles et pendentif </h3>
+					<p
+						data-fr="En quelques semaines, j'ai pris le temps de découvrir le métier de joaillier. Je me suis retrouvé face à un défi de taille où j'ai du apprendre et m'adapter afin de réaliser un bijou d'une très grande valeur sentimentale. Ce défi m'a apporté beaucoup. J'ai découvert une passion où je peux allier mes connaissances théoriques à la pratique. De plus, pour visualiser au mieux les projets, je me permets de les modéliser en 3D."
+						data-en="Over a few weeks, I took the time to discover the jeweler's trade. I found myself facing a major challenge where I had to learn and adapt in order to create a piece of jewelry with enormous sentimental value. This challenge brought me a lot. I discovered a passion where I can combine my theoretical knowledge with practice. In addition, to better visualize projects, I like to model them in 3D.">
+						En quelques semaines, j'ai pris le temps de découvrir le métier de joaillier.
 						Je me suis retrouvé face à un défi de taille où j'ai du apprendre et m'adapter afin de réaliser un bijou d'une très grande valeur sentimentale.
-						Ce défi m'a apporté beaucoup. J'ai découvert une passion où je peux allier mes connaissances théoriques à la pratique. 
-						De plus, pour visualiser au mieux les projets, je me permets de les modéliser en 3D. 
-						
+						Ce défi m'a apporté beaucoup. J'ai découvert une passion où je peux allier mes connaissances théoriques à la pratique.
+						De plus, pour visualiser au mieux les projets, je me permets de les modéliser en 3D.
+
 					</p>
 				</div>
 				<!-- Bague -->
 				<div class="project-block__image">
 					<div class="video-frame sm-bague">
 						<div class="hotspot-frame" data-hotspot-group="bague">
-							
+
 							<video autoplay controls muted loop playsinline>
 								<source src="images/bague.mp4" type="video/mp4">
 								Votre navigateur ne supporte pas la lecture des vidéos.
 							</video>
-							
+
 						</div>
 					</div>
 				</div>
-				
-				
+
+
 				<!-- Collier -->
 				<div class="project-block__image">
 				<div class="sm-logo">
@@ -360,29 +402,31 @@
 					</div>
 					</div>
 				</div>
-				
+
 				<div class="project-block__image">
 					<div class="video-frame sm-video">
 						<div class="hotspot-frame" data-hotspot-group="projet-eric">
-							
+
 							<video autoplay controls muted loop playsinline>
 								<source src="images/projet_eric.mp4" type="video/mp4">
 								Votre navigateur ne supporte pas la lecture des vidéos.
 							</video>
-							
+
 						</div>
 					</div>
 				</div>
 			</div>
-			
-	
+
+
 						<!-- Projet Mécanique -->
 			<div class="project-block">
 				<div class="project-block__text">
-					<h3>Projets de mécanique</h3>
-					<p>
-						J'ai effectué de la maintenance corrective et systématique sur des véhicules automobiles et engins d'espaces verts. 
-						J'ai remplacé différentes pièces comme un turbocompresseur, un cardan, des freins. 
+					<h3 data-fr="Projets de mécanique" data-en="Mechanical projects">Projets de mécanique</h3>
+					<p
+						data-fr="J'ai effectué de la maintenance corrective et systématique sur des véhicules automobiles et engins d'espaces verts. J'ai remplacé différentes pièces comme un turbocompresseur, un cardan, des freins. J'ai également effectué la maintenance systématique de tondeuses, débrousailleuses et outils type &quot;combiné&quot;."
+						data-en="I performed corrective and preventive maintenance on motor vehicles and outdoor power equipment. I replaced various parts such as a turbocharger, a driveshaft, and brakes. I also carried out preventive maintenance on lawnmowers, brush cutters, and combi-tool equipment.">
+						J'ai effectué de la maintenance corrective et systématique sur des véhicules automobiles et engins d'espaces verts.
+						J'ai remplacé différentes pièces comme un turbocompresseur, un cardan, des freins.
 						J'ai également effectué la maintenance systématique de tondeuses, débrousailleuses et outils type "combiné".
 					</p>
 				</div>
@@ -390,13 +434,15 @@
 					<img src="images/mechanic.png" class="placeholder-img" data-label="Photo de vous en action">
 				</div>
 			</div>
-			
-			
+
+
 			<!-- Projet Menuiserie -->
 			<div class="project-block project-block--reverse">
 				<div class="project-block__text">
-					<h3>Projets de menuiserie</h3>
-					<p>
+					<h3 data-fr="Projets de menuiserie" data-en="Carpentry projects">Projets de menuiserie</h3>
+					<p
+						data-fr="J'ai réalisé des armoires sur mesure, des meubles simples ou personnalisés avec de la résine époxy, des travaux de rénovation d'une cuisine avec une remise en état de l'électricité et encore des terrasses sur pilotis sur des terrains en pente."
+						data-en="I have built custom-made cabinets, simple or personalized furniture with epoxy resin, kitchen renovation work including electrical rewiring, and elevated decks on sloped terrain.">
 						J'ai réalisé des armoires sur mesure, des meubles simples ou personnalisés avec de la résine époxy, des travaux de rénovation d'une cuisine avec une remise en état de l'électricité et encore des terrasses sur pilotis sur des terrains en pente.
 					</p>
 				</div>
@@ -404,20 +450,20 @@
 					<img src="images/menuiserie_perso.png" class="placeholder-img" data-label="Photo de vous en action">
 				</div>
 			</div>
-			
-			
-			
-			
-			
+
+
+
+
+
 		</section>
-		
+
 	</main>
-	
+
 	<footer class="site-footer">
 		<div class="rule"></div>
 		<p>© <span id="year"></span> Lucas Damstén</p>
 	</footer>
-	
+
 	<script src="script.js"></script>
 </body>
 </html>

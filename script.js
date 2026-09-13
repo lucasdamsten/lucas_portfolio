@@ -217,3 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 });
+
+
+searchToggle.addEventListener("click", () => {
+    searchBar.classList.toggle("is-open");
+});

@@ -145,6 +145,41 @@ a { color: inherit; }
   color: var(--brass);
 }
 
+@media (max-width: 600px) {
+    .site-nav {
+        flex-wrap: wrap;
+		position: fixed;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
 /* ==========================================================================
    SECTIONS génériques
    ========================================================================== */

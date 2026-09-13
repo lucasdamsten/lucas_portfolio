@@ -224,7 +224,9 @@ a { color: inherit; }
 .video-frame video {
   width: 100%;
   height: auto;
-  display: block;
+  display: flex;
+   justify-content: center; /* horizontal */
+   align-items: center;     /* vertical */
 }
 /* ==========================================================================
    BLOCS "PROJET" (texte + image à hotspots), utilisés dans les 3 autres
@@ -248,6 +250,12 @@ a { color: inherit; }
 
 .project-block__image img {
     max-width: 100%;
+    height: auto;
+}
+
+
+.project-block__image_sm img {
+    max-width: 50%;
     height: auto;
 }
 
@@ -346,7 +354,31 @@ repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px 14px
 }
 
 .sm-logo{
-	width:40%
+	width:50%
+}
+
+.sm-video{
+	width:80%
+}
+
+.inline-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.inline-block > .hotspot-frame,
+.inline-block > .video-frame {
+    width: 45%;
+}
+
+.inline-block img,
+.inline-block video {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 #img-norm{
@@ -389,7 +421,7 @@ repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0 1px, transparent 1px 14px
 }
 
 .sm-bague{
-	width:60%
+	width:80%
 }
 
 /* ==========================================================================

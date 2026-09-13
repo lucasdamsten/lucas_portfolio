@@ -95,8 +95,8 @@ a { color: inherit; }
 	white-space: nowrap;
 }
 .nav-pill:hover {
-	background: currentColor;
-	color: #fff;
+	background: beige;
+	font-weight:bold;
 }
 
 
@@ -512,9 +512,10 @@ linear-gradient(180deg, #e1d5c1, #373737);
 
 .hotspot__tooltip {
   position: absolute;
-  left: 50%;
-  bottom: calc(100% + 10px);
-  transform: translateX(-50%);
+  left: 0;
+  top: 0;
+  transform: translate(-50%, calc(-100% - 20px));
+  
   width: max-content;
   max-width: 230px;
   background: var(--ink);

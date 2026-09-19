@@ -16,7 +16,7 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-body:    "IBM Plex Sans", sans-serif;
 
-  --max-width: 60%;
+  --max-width: 65%;
 }
 
 
@@ -428,32 +428,18 @@ linear-gradient(180deg, #e1d5c1, #373737);
 
 .plans-images {
     display: flex;
-    gap: 0.05rem;
+    gap: 0.5rem;
     align-items: center;
-	margin-bottom:50px;
+    margin-bottom: 50px;
+    width: 100%;
 }
-
 
 .plans-images img {
-	display:flex;
-    width: 70%;
-    height:350px;
-    object-fit: contain;
-}
-
-
-.plans-images-hvac {
-    display: flex;
-    gap: 0.05rem;
-    align-items: center;
-	margin-bottom:50px
-}
-.plans-images-hvac img {
-		display:flex;
+    flex: 1 1 0;      /* chaque image prend une part égale */
+    min-width: 0;     /* autorise le rétrécissement sous la taille naturelle */
     width: 100%;
-    height: 480px;
+    height: auto;     /* conserve les proportions */
     object-fit: contain;
-	transform: rotate(-90deg);
 }
 
 
@@ -487,12 +473,6 @@ linear-gradient(180deg, #e1d5c1, #373737);
 
 #img-norm{
    width: 100%;
-}
-
-#hvac-plan-main{
-	   width: 70%;
-	   margin-left: 25%;
-	  transform: rotate(-90deg);
 }
 
 

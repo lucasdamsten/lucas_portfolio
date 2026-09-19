@@ -16,7 +16,7 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-body:    "IBM Plex Sans", sans-serif;
 
-  --max-width: 65%;
+  --max-width: 60%;
 }
 
 
@@ -437,9 +437,25 @@ linear-gradient(180deg, #e1d5c1, #373737);
 .plans-images img {
 	display:flex;
     width: 70%;
-    height: 250px;
+    height:350px;
     object-fit: contain;
 }
+
+
+.plans-images-hvac {
+    display: flex;
+    gap: 0.05rem;
+    align-items: center;
+	margin-bottom:50px
+}
+.plans-images-hvac img {
+		display:flex;
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+	transform: rotate(-90deg);
+}
+
 
 .sm-logo{
 	width:50%
@@ -477,17 +493,6 @@ linear-gradient(180deg, #e1d5c1, #373737);
 	   width: 70%;
 	   margin-left: 25%;
 	  transform: rotate(-90deg);
-}
-
-.plans-images-hvac {
-    display: flex;
-    gap: 13.5rem;
-    align-items: center;
-	justify-content:center
-}
-.plans-images-hvac img {
-	transform: rotate(-90deg);
-	width:20%;
 }
 
 

@@ -16,7 +16,7 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-body:    "IBM Plex Sans", sans-serif;
 
-  --max-width: 68%;
+  --max-width: 65%;
 }
 
 
@@ -133,7 +133,7 @@ a { color: inherit; }
 
 .site-nav nav a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: var(--ink);
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
